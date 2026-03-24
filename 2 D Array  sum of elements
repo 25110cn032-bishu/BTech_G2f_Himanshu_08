@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    // Declare and initialize a 2D array (matrix)
+    int matrix[3][4] = {
+        {10, 15, 20, 25},
+        {30, 35, 40, 45},
+        {50, 55, 60, 65}
+    };
+
+    int rows = 3;
+    int cols = 4;
+    int sum = 0;
+    int i, j;
+
+    // Use nested loops to iterate through each element and calculate the sum
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
+            sum += matrix[i][j]; // Add the current element to the sum
+        }
+    }
+
+    // Print the total sum of all elements in the array
+    printf("The sum of all elements in the 2D array is: %d\n", sum);
+
+    return 0;
+}
