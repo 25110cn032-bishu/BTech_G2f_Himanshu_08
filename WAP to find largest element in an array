@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int size, i, largest;
+    
+    // 1. Get the size of the array from the user
+    printf("\nEnter the size of the array: ");
+    scanf("%d", &size);
+    
+    int array[size]; // Declaring array
+    
+    // 2. Input array elements
+    printf("\nEnter %d elements of the array: \n", size);
+    for (i = 0; i < size; i++) {
+        scanf("%d", &array[i]);
+    }
+    
+    // 3. Initialize 'largest' with the first element
+    largest = array[0];
+    
+    // 4. Traverse the array from the second element onwards
+    for (i = 1; i < size; i++) {
+        // 5. Compare current element with 'largest' and update if necessary
+        if (largest < array[i]) {
+            largest = array[i];
+        }
+    }
+    
+    // 6. Print the largest element
+    printf("\nLargest element present in the given array is: %d\n", largest);
+    
+    return 0;
+}
